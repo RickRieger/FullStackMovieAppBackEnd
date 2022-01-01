@@ -17,7 +17,7 @@ router.post("/send-sms",jwtMiddleware, function (req, res) {
     })
     .then((message) => res.json(message))
     .catch((error) => {
-      console.log(error.message);
+      
       res.status(error.status).json({ message: error.message, error });
     });
 });
